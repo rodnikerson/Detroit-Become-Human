@@ -1,0 +1,97 @@
+header {
+    width: 100%;
+    padding-top: 16px;
+}
+
+.navbar {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    margin: 0 48px 0 0;
+    width: 152px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+
+    @include responsive() {
+        display: none;
+    }
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 200;
+    padding: 8px 16px;
+    position: relative;
+    transition: .1s ease;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 10%;
+        height: 1px;
+        background: $d-white;
+        width: 0px;
+        transition: .5s ease;
+    }
+
+    &:hover {
+        text-shadow: 0 0 0.025px $d-white;
+
+        &::after {
+            width: calc(100% - 32px);
+        }
+    }
+}
+
+.nav-social {
+    display: flex;
+    gap: 16px;
+
+    svg {
+        cursor: pointer;
+
+        path {
+            transition: .5s ease;
+        }
+
+        &:hover {
+            path, circle {
+                fill: $d-blue;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+    @include responsive() {
+        display: none;
+    }
+}
+
+.mob-menu {
+    display: none;
+    background-color: red;
+
+    @include responsive() {
+        display: block;
+    }
+}
