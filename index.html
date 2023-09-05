@@ -1,81 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detroit: Become Human</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/svg-inject.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- HEADER -->
 
     <header>
-        <nav class="navbar">
-            <div class="nav-menu">
-                <div class="logo">
-                    <img src="assets/svg/qd-logo.svg" alt="Quantic Dream Logo" onload="SVGInject(this)">
-                </div>
-                <ul class="nav-list">
-                    <li>
-                        <a href="" class="nav-link">Home</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav-link">Overview</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav-link">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="" class="nav-link">WHO AM I?</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav-social">
-                <img src="assets/svg/icon-facebook.svg" alt="Facebook Logo" onload="SVGInject(this)">
-                <img src="assets/svg/icon-instagram.svg" alt="Instagram Logo" onload="SVGInject(this)">
-                <img src="assets/svg/icon-youtube.svg" alt="Youtube Logo" onload="SVGInject(this)">
-                <img src="assets/svg/icon-twitter.svg" alt="Twitter Logo" onload="SVGInject(this)">
-                <img src="assets/svg/icon-linkedin.svg" alt="Linkedin Logo" onload="SVGInject(this)">
-            </div>
-            <div class="mob-menu">
-                X
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="nav-menu">
+          <div class="logo">
+            <img
+              src="assets/svg/qd-logo.svg"
+              alt="Quantic Dream Logo"
+              onload="SVGInject(this)"
+            />
+          </div>
+          <input id="hamburguer" type="checkbox" />
+          <label for="hamburguer">
+            <div class="hamburguer"></div>
+          </label>
+          <ul class="nav-list">
+            <li>
+              <a href="" class="nav-link">Home</a>
+            </li>
+            <li>
+              <a href="" class="nav-link">Overview</a>
+            </li>
+            <li>
+              <a href="" class="nav-link">Gallery</a>
+            </li>
+            <li>
+              <a href="" class="nav-link">WHO AM I?</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-social">
+          <img
+            src="assets/svg/icon-facebook.svg"
+            alt="Facebook Logo"
+            onload="SVGInject(this)"
+          />
+          <img
+            src="assets/svg/icon-instagram.svg"
+            alt="Instagram Logo"
+            onload="SVGInject(this)"
+          />
+          <img
+            src="assets/svg/icon-youtube.svg"
+            alt="Youtube Logo"
+            onload="SVGInject(this)"
+          />
+          <img
+            src="assets/svg/icon-twitter.svg"
+            alt="Twitter Logo"
+            onload="SVGInject(this)"
+          />
+          <img
+            src="assets/svg/icon-linkedin.svg"
+            alt="Linkedin Logo"
+            onload="SVGInject(this)"
+          />
+        </div>
+      </nav>
     </header>
 
     <!-- MAIN CONTENT -->
 
     <section class="detroit-video">
-        <video class="video" autoplay muted loop>
-            <source src="assets/videos/detroit-trailer.mp4" type="video/mp4">
-        </video>
+      <video class="video" autoplay muted loop>
+        <source src="assets/videos/detroit-trailer.mp4" type="video/mp4" />
+      </video>
     </section>
 
     <section class="container">
-        <div class="container-item-1">
-            <img src="assets/imgs/detroit-logo.png" alt="Detroit Logo" onload="SVGInject(this)">
-            <p>
-                Embark on a thrilling journey through a dystopian future in Detroit: Become Human. Your choices shape the fate of androids in this gripping narrative adventure. Prepare for a revolution like no other!
-            </p>
-            <div class="flex ai-center my-3 g-4">
-                <a href="" class="btn">
-                    <img class="triangle" src="assets/svg/triangle.svg" alt="Triangle" onload="SVGInject(this)">
-                    Buy Now
-                </a>
-                <p class="observation"><span>*</span> Free for Androids</p>
-            </div>
-            <div class="flex ai-center g-4">
-                <img src="assets/svg/steam.svg" alt="Steam Logo" onload="SVGInject(this)">
-                <img src="assets/svg/playstation.svg" alt="Playstation Logo" onload="SVGInject(this)">
-            </div>
+      <div class="container-item-1">
+        <img
+          src="assets/imgs/detroit-logo.png"
+          alt="Detroit Logo"
+          onload="SVGInject(this)"
+        />
+        <p>
+          Embark on a thrilling journey through a dystopian future in Detroit:
+          Become Human. Your choices shape the fate of androids in this gripping
+          narrative adventure. Prepare for a revolution like no other!
+        </p>
+        <div class="flex ai-center my-3 g-4">
+          <a href="" class="btn">
+            <img
+              class="triangle"
+              src="assets/svg/triangle.svg"
+              alt="Triangle"
+              onload="SVGInject(this)"
+            />
+            Buy Now
+          </a>
+          <p class="observation"><span>*</span> Free for Androids</p>
         </div>
-
+        <div class="flex ai-center g-4">
+          <img
+            src="assets/svg/steam.svg"
+            alt="Steam Logo"
+            onload="SVGInject(this)"
+          />
+          <img
+            src="assets/svg/playstation.svg"
+            alt="Playstation Logo"
+            onload="SVGInject(this)"
+          />
+        </div>
+      </div>
     </section>
-    
-</body>
+  </body>
 </html>

@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +14,8 @@ body {
   padding: 1rem;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   width: 100%;
 }
@@ -23,7 +26,7 @@ img, svg {
 
 a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 .border {
@@ -32,7 +35,7 @@ a {
 
 p {
   font-size: 14px;
-  color: #FFF;
+  color: #fff;
   letter-spacing: 1px;
   line-height: 140%;
 }
@@ -76,14 +79,19 @@ p {
 .btn:hover {
   transition: 0.5s ease;
   background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #3EC5FF;
+  border: 2px solid #3ec5ff;
+}
+@media screen and (max-width: 960px) {
+  .btn {
+    z-index: -1;
+  }
 }
 
 .observation {
   font-size: 10px;
 }
 .observation span {
-  color: #3EC5FF;
+  color: #3ec5ff;
 }
 
 .flex {
@@ -100,6 +108,11 @@ p {
 
 .my-3 {
   margin: 12px 0;
+}
+@media screen and (max-width: 960px) {
+  .my-3 {
+    margin: 24px 0;
+  }
 }
 
 .detroit-video {
@@ -122,7 +135,7 @@ p {
   left: 0;
   top: 0;
   display: block;
-  background: linear-gradient(101.47deg, #0A0C10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0A0C10 73.17%);
+  background: linear-gradient(101.47deg, #0a0c10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0a0c10 73.17%);
 }
 
 .video {
@@ -153,6 +166,12 @@ header {
   justify-content: flex-start;
   align-items: center;
 }
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 
 .logo {
   margin: 0 48px 0 0;
@@ -163,10 +182,22 @@ header {
   list-style: none;
   display: flex;
   gap: 16px;
+  left: unset;
 }
 @media screen and (max-width: 960px) {
   .nav-list {
-    display: none;
+    flex-direction: column;
+    padding: 25% 0;
+    position: fixed;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 0.5s ease;
   }
 }
 
@@ -180,18 +211,25 @@ header {
   position: relative;
   transition: 0.1s ease;
 }
+@media screen and (max-width: 960px) {
+  .nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #3ec5ff;
+  }
+}
 .nav-link::after {
   content: "";
   display: block;
   position: absolute;
   bottom: 10%;
   height: 1px;
-  background: #FFF;
+  background: #fff;
   width: 0px;
   transition: 0.5s ease;
 }
 .nav-link:hover {
-  text-shadow: 0 0 0.025px #FFF;
+  text-shadow: 0 0 0.025px #fff;
 }
 .nav-link:hover::after {
   width: calc(100% - 32px);
@@ -207,8 +245,9 @@ header {
 .nav-social svg path {
   transition: 0.5s ease;
 }
-.nav-social svg:hover path, .nav-social svg:hover circle {
-  fill: #3EC5FF;
+.nav-social svg:hover path,
+.nav-social svg:hover circle {
+  fill: #3ec5ff;
   transform: translateY(-3px);
 }
 @media screen and (max-width: 960px) {
@@ -217,12 +256,58 @@ header {
   }
 }
 
-.mob-menu {
+.hamburguer {
   display: none;
-  background-color: red;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 2;
+}
+.hamburguer::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 10%;
+  background: #fff;
+  border-radius: 5px;
+  top: 30%;
+  left: 15%;
+  transition: 1s ease;
+}
+.hamburguer::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 10%;
+  background: #fff;
+  border-radius: 2.5px;
+  top: 60%;
+  left: 42.5%;
+  transition: 1s ease;
 }
 @media screen and (max-width: 960px) {
-  .mob-menu {
+  .hamburguer {
     display: block;
   }
+}
+
+#hamburguer {
+  display: none;
+}
+#hamburguer:checked ~ label .hamburguer:after {
+  transform: rotate(225deg);
+  top: 45%;
+  left: 15%;
+}
+#hamburguer:checked ~ label .hamburguer:before {
+  transform: rotate(-225deg);
+  top: 45%;
+  left: 15%;
+  width: 70%;
+  height: 10%;
+}
+#hamburguer:checked ~ .nav-list {
+  display: flex;
+  left: 50%;
+  transition: 0.5s ease;
 }/*# sourceMappingURL=style.css.map */

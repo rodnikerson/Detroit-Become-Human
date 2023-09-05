@@ -1,44 +1,51 @@
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Exo 2', sans-serif;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
 }
 
-@import 'partials/colors';
+@import "partials/colors";
 
 body {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, .3) 100%);
-    padding: 1rem;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  padding: 1rem;
 }
 
-img, svg {
-    display: block;
-    width: 100%;
+img,
+svg {
+  display: block;
+  width: 100%;
 }
 
 .triangle {
-    width: unset;
+  width: unset;
 }
 
 a {
-    text-decoration: none;
-    color: $d-white;
+  text-decoration: none;
+  color: $d-white;
 }
 
 .border {
-    border: 1px solid blue;
+  border: 1px solid blue;
 }
 
 p {
-    font-size: 14px;
-    color: $d-white;
-    letter-spacing: 1px;
-    line-height: 140%;
+  font-size: 14px;
+  color: $d-white;
+  letter-spacing: 1px;
+  line-height: 140%;
 }
 
-@import 'partials/layout';
-@import 'partials/menu';
-@import 'partials/animations';
+@import "partials/layout";
+@import "partials/menu";
+@import "partials/animations";
