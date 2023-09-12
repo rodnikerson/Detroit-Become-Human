@@ -33,6 +33,7 @@ header {
   display: flex;
   gap: 16px;
   left: unset;
+  z-index: 1;
 
   @include responsive() {
     flex-direction: column;
